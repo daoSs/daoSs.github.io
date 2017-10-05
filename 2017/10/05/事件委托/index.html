@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    
+    <title>
+        
+            事件委托 | 
+        
+        daoSs`s blog
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="daoSs">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="daoSs,daoSs blog,blog,js">
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="daoSs`s blog">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="事件委托 | daoSs`s blog">
+    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="js"> 
+
+    
+        <meta property="article:published_time" content="Thu Oct 05 2017 10:46:36 GMT+0800" />
+        <meta property="article:modified_time" content="Thu Oct 05 2017 11:00:52 GMT+0800" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="事件委托 | daoSs`s blog">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://yoursite.com" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2017/10/05/事件委托/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2017/10/05/事件委托/index.html",
+    "headline": "事件委托",
+    "datePublished": "Thu Oct 05 2017 10:46:36 GMT+0800",
+    "dateModified": "Thu Oct 05 2017 11:00:52 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "daoSs",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Yesterday you said Tomorrow"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "daoSs`s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",jsdaoSs,daoSs blog,blog",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#写在前面"><span class="post-toc-number">1.</span> <span class="post-toc-text">写在前面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#从绑定和解绑事件处理程序说起"><span class="post-toc-number">2.</span> <span class="post-toc-text">从绑定和解绑事件处理程序说起</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#stopImmediatePropagation-and-stopPropagation"><span class="post-toc-number">3.</span> <span class="post-toc-text">stopImmediatePropagation and stopPropagation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Jquery中的on-amp-off"><span class="post-toc-number">4.</span> <span class="post-toc-text">Jquery中的on() & off()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#写在最后"><span class="post-toc-number">5.</span> <span class="post-toc-text">写在最后</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://owznda5oi.bkt.clouddn.com/v2-bdaa4814ea4d44e6b6e3343513ebe8cf_r.png)">
+    
+            <p class="article-headline-p">
+                事件委托
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>daoSs</strong>
+        <span>10月 05, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/js/">js</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=事件委托&url=http://yoursite.com/2017/10/05/事件委托/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=daoSs`s blog&title=事件委托&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2017/10/05/事件委托/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>去年还是前端小菜鸡的时候接到了新美大某部门的电话面试，相谈甚欢之时电话那边的小哥哥问我知道不知道事件委托机制，笑脸凝固在了我稚嫩的脸上……随便翻高程的时候听说过这个名词，也只是听说而已，并不太理解其中含义（当时代码里也没有用到过），我只能苦笑着回答说不太了解，之后面试官又问我，那如果现在有个列表页，有n个 li，要怎么给它们分别绑定事件呢?</p>
+<p>那次面试当然是失败的啦，估计电面我的小哥哥就是从这个问题开始看清的底子的……哎呦，错失了进入新美大的机会呦。一年后的今天，带着在携厂工作一年的经验加上实际业务中对委托机制的了解以及携程lizard框架中事件绑定方法的了解，决定写一篇文章彻底弄明白+总结下这东西的原理。</p>
+<h3 id="从绑定和解绑事件处理程序说起"><a href="#从绑定和解绑事件处理程序说起" class="headerlink" title="从绑定和解绑事件处理程序说起"></a>从绑定和解绑事件处理程序说起</h3><p>既然是说前端开发中的事件，那一定要从绑定和解绑说起，我们来写一个逼格高高的事件处理程序（例子来自js忍者密集）。</p>
+<p>由于诸多原因，不将事件处理程序直接绑定在元素上是有利的，具体思想是我们将使用一个中间事件处理程序，并将所有的处理程序保存在一个单独的对象上，让我们来最大化的控制处理过程。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//实现一个中央对象用来保存DOM元素信息</span></div><div class="line"><span class="comment">//给每个元素都指定一个标识符</span></div><div class="line">    <span class="keyword">var</span> cache,   <span class="comment">//保存和元素相关联的数据</span></div><div class="line">        guidCounter = <span class="number">1</span>, <span class="comment">//用于生成元素GUID的计数器</span></div><div class="line">        <span class="comment">//将其作为元素的GUID进行保存，防止与用户自定义名称冲突</span></div><div class="line">        expando = <span class="string">"data"</span>+(<span class="keyword">new</span> <span class="built_in">Date</span>).getTime();</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.getData = <span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> guid = elem[expando];</div><div class="line">        <span class="keyword">if</span>(!guid)&#123;</div><div class="line">            guid = elem[expando] = guidCounter ++;</div><div class="line">            cache[guid] = &#123;&#125;;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> cache[guid];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.removeData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> guid = elem[expando];</div><div class="line">        <span class="keyword">if</span>(!guid) <span class="keyword">return</span>;</div><div class="line">        <span class="keyword">delete</span> cache[guid];</div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">            <span class="keyword">delete</span> cache[expando];</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">catch</span> (e)&#123;</div><div class="line">            <span class="keyword">if</span>(elem.removeAttribute)&#123;</div><div class="line">                elem.removeAttribute(expando);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>为了完全控制事件处理过程，我们需要创建自己的函数来包装事件。我们的方法需要做到以下几点：</p>
+<blockquote>
+<ul>
+<li>将函数上下文设置为目标元素。</li>
+<li>event实例做为唯一的参数传递给处理程序</li>
+<li>事件处理程序永远按照其绑定顺序进行执行</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> nextGuid = <span class="number">1</span>;</div><div class="line"><span class="keyword">this</span>.addEvent = <span class="function"><span class="keyword">function</span>(<span class="params">elem,type,fn</span>)</span>&#123;</div><div class="line"></div><div class="line"><span class="comment">//我们会多次引用该数据，所以将其保存在一个变量中以便将引用保持短小</span></div><div class="line"><span class="comment">//获取数据会有很大开销，因此我们只做一次获取</span></div><div class="line">    <span class="keyword">var</span> data = getData(elem);</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(!data.handlers) &#123;</div><div class="line">            data.handlers = &#123;&#125;;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(!data.handlers[type])&#123;</div><div class="line">            data.handlers[type] = [];</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(!fn.guid) &#123;</div><div class="line">            fn.guid = nextGuid++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        data.handlers[type].push(fn);</div><div class="line"></div><div class="line">        <span class="comment">//创建事件调度器</span></div><div class="line">        <span class="keyword">if</span>(!data.dispatcher)&#123;</div><div class="line">            data.disabled = <span class="literal">false</span>;</div><div class="line">            data.dispatcher = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">                <span class="keyword">if</span>(data.disabled)&#123;</div><div class="line">                    <span class="keyword">return</span>;</div><div class="line">                &#125;</div><div class="line">                <span class="comment">//event= fixEvent(event);</span></div><div class="line"></div><div class="line">                <span class="comment">//调用注册的处理程序</span></div><div class="line">                <span class="keyword">var</span> handlers = data.handlers[event.type];</div><div class="line">                <span class="keyword">if</span>(handlers)&#123;</div><div class="line">                    <span class="keyword">for</span>(<span class="keyword">var</span> n = <span class="number">0</span>;n&lt;handlers.length;n++)&#123;</div><div class="line">                        handlers[n].call(elem,event);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//注册调度器</span></div><div class="line">        <span class="keyword">if</span>(data.handlers[type].length == <span class="number">1</span>)&#123;</div><div class="line">            <span class="keyword">if</span>(<span class="built_in">document</span>.addEventListener)&#123;</div><div class="line">                elem.addEventListener(type,data.dispatcher,<span class="literal">false</span>);</div><div class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">document</span>.attachEvent)&#123;</div><div class="line">                elem.attachEvent(<span class="string">"on"</span>+type,data.dispatcher);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>为了适配我们写好的绑定程序，解绑时我们不能只是对处理程序进行解绑，还要确保清理对象资源，代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//该函数为调用者提供以下功能</span></div><div class="line"><span class="comment">//将一个元素的所有绑定事件进行解绑</span></div><div class="line"><span class="comment">//将一个元素特定类型的所有事件进行解绑</span></div><div class="line"><span class="comment">//将一个元素的特定处理程序进行解绑</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tidyUp</span>(<span class="params">elem,type</span>)</span>&#123;</div><div class="line">        <span class="comment">//判断是否为空对象</span></div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">isEmpty</span>(<span class="params">obj</span>)</span>&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> prop <span class="keyword">in</span> obj)&#123;</div><div class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> data = getData(elem);</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(data.handlers[type].length === <span class="number">0</span>)&#123;</div><div class="line">            <span class="keyword">delete</span> data.handlers[type];</div><div class="line"></div><div class="line">            <span class="keyword">if</span>(<span class="built_in">document</span>.removeEventListener)&#123;</div><div class="line">                elem.removeEventListener(type,data.dispatcher,<span class="literal">false</span>);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">document</span>.detachEvent)&#123;</div><div class="line">                elem.detachEvent(<span class="string">'on'</span>+type,data.dispatcher);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(isEmpty(data.handlers))&#123;</div><div class="line">            <span class="keyword">delete</span> data.handlers;</div><div class="line">            <span class="keyword">delete</span> data.dispatcher;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(isEmpty(data))&#123;</div><div class="line">            removeData(elem);</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>然后再实现一个功能全面的解绑函数：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.removeEvent = <span class="function"><span class="keyword">function</span>(<span class="params">elem,type,fn</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> data = getData(elem);</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(!data.handlers) <span class="keyword">return</span>;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> removeType = <span class="function"><span class="keyword">function</span>(<span class="params">t</span>)</span>&#123;</div><div class="line">            data.handlers[t] = [];</div><div class="line">            tidyUp(elem,t);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(!type)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> t <span class="keyword">in</span> data.handlers) removeType(t);</div><div class="line"></div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> handlers = data.handlers[type];</div><div class="line">        <span class="keyword">if</span>(!handlers) <span class="keyword">return</span>;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(!fn)&#123;</div><div class="line">            removeType(type);</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(fn.guid)&#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> n=<span class="number">0</span>;n&lt;handlers.length;n++)&#123;</div><div class="line">                <span class="keyword">if</span>(handlers[n].guid === fn.guid)&#123;</div><div class="line">                    handlers.splice(n--,<span class="number">1</span>);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        tidyUp(elem,type);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>冒泡与委托</p>
+<p>委托(delegation)是表示在dom上层定义事件处理程序。</p>
+<p>回到开篇提到的问题：</p>
+<blockquote>
+<p>如果现在有个列表页，有n个li，要怎么给它们分别绑定事件呢?<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cells = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> n; n&lt; cells.length; n++)&#123;</div><div class="line">    <span class="keyword">this</span>.style.backgroundColor = <span class="string">'yellow'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>做为有追求的前端工程师。我们当然不能用这么蠢的方法！<br>event对象target属性可以获取当前触发元素的引用。因此，我们可以借助事件冒泡来统一处理子级元素上的事件。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.getElementById(<span class="string">'#ul'</span>);</div><div class="line">addEvent(ul, <span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">   <span class="keyword">if</span>(event.target.tagName.toLowerCase() == <span class="string">'li'</span>)&#123;</div><div class="line">     event.target.style.backgroundColor = <span class="string">'yellow'</span>;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>当然不是所有事件都可以冒泡，submit、change、focus以及blur事件的冒泡都有很严重的问题，因此如果需要统一使用事件委托，还需要为具体的事件单独适配。</p>
+<h3 id="stopImmediatePropagation-and-stopPropagation"><a href="#stopImmediatePropagation-and-stopPropagation" class="headerlink" title="stopImmediatePropagation and stopPropagation"></a>stopImmediatePropagation and stopPropagation</h3><p>思考以下场景，还是列表页，一个卡片上面有个红包按钮，从dom结构上来看，红包按钮元素是卡片元素的子元素。现在需求方提出需要点击卡片的时候需要跳转到一个新页面，点击红包的时候需要跳转到另外一个页面。这个时候，只要学过js事件冒泡的同学都会说了，点击红包了以后我们必须要阻止事件向上冒泡了，要不然两个按钮上绑定的事件都会被触发。</p>
+<p>但是这个组织冒泡，什么情况下我们都调用event.stopPropagation()就可以了么？</p>
+<p>当然要具体情况具体分析，就比如我工作中基础部门给我们封装的框架，刚开始不明白的时候以为事件就是绑定在每一个元素上的，直接event.stopPropagation()就可以了，可是发现不生效的。后来才知道，框架是在最开始的时候将所有事件都委托到body上，就像下面这样：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//某大厂前端框架写法</span></div><div class="line">define([</div><div class="line">    <span class="string">'cPageView'</span>,</div><div class="line">    <span class="string">'gsCommon'</span></div><div class="line">],<span class="function"><span class="keyword">function</span>(<span class="params"></span></span></div><div class="line"><span class="function"><span class="params">    BasePageView,</span></span></div><div class="line"><span class="function"><span class="params">    gsCommon</span></span></div><div class="line"><span class="function"><span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> view = BasePageView.extend(&#123;</div><div class="line">        events: &#123;</div><div class="line">            <span class="string">'click .js_goDetail'</span>: <span class="string">'toDetail'</span>,</div><div class="line">            <span class="string">'click .js_goRedPack'</span>: <span class="string">'toRedPack'</span></div><div class="line">        &#125;,</div><div class="line">        onShow:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">///////////domready事件</span></div><div class="line">        &#125;,</div><div class="line">        onCreate: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">////constractor</span></div><div class="line">        &#125;,</div><div class="line">        toDetail: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">            <span class="comment">/////跳详情页</span></div><div class="line">        &#125;,</div><div class="line">        toRedPack: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">            <span class="comment">//跳红包页</span></div><div class="line">            e.stopImmediatePropagation();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> view;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>其中，events对象是当前页面所有事件，初始化的时候，框架会把这些方法全部代理到body上。如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'body'</span>).on(<span class="string">'click'</span>,<span class="string">'.js_goDetail'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">   <span class="keyword">this</span>.toDetail(e);</div><div class="line">&#125;);</div><div class="line">$(<span class="string">'body'</span>).on(<span class="string">'click'</span>,<span class="string">'.js_goRedPack'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">   <span class="keyword">this</span>.toRedPack(e);</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>这个时候，在toRedPack()中使用event.stopPropagation()是不会生效的，需要使用event.stopImmediatePropagation()。<br>让我们开看看这两个方法官方给出的说明：</p>
+<p>event.stopImmediatePropagation()</p>
+<blockquote>
+<p>如果某个元素有多个相同类型事件的事件监听函数,则当该类型的事件触发时,多个事件监听函数将按照顺序依次执行.如果某个监听函数执行了 event.stopImmediatePropagation()方法,则除了该事件的冒泡行为被阻止之外(event.stopPropagation方法的作用),该元素绑定的后序相同类型事件的监听函数的执行也将被阻止.</p>
+</blockquote>
+<p>event.stopPropagation()</p>
+<blockquote>
+<p>其阻止了当前事件在 DOM 的进一步冒泡行为。防止对事件流中当前节点的后续节点中的所有事件侦听器进行处理。此方法不会影响当前节点 (currentTarget) 中的任何事件侦听器。</p>
+</blockquote>
+<h3 id="Jquery中的on-amp-off"><a href="#Jquery中的on-amp-off" class="headerlink" title="Jquery中的on() &amp; off()"></a>Jquery中的on() &amp; off()</h3><p>自从jquery 1.7起推荐优先使用on off方法绑定和移除事件。jquery内部delegate one live 等便捷绑定函数都是通过on() off()实现的。</p>
+<p>方法.on(events[,selector][,data],handler(eventObject))调用链：</p>
+<p>.one/bind/delegate/live时间便捷方法() -&gt; .on() -&gt; jQuery.event.add() -&gt; addEventListener/attachEvent/jQuery._data()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//on</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">on</span>(<span class="params"> elem, types, selector, data, fn, one </span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> origFn, type;</div><div class="line"></div><div class="line">	<span class="comment">// Types can be a map of types/handlers</span></div><div class="line">	<span class="keyword">if</span> ( <span class="keyword">typeof</span> types === <span class="string">"object"</span> ) &#123;</div><div class="line"></div><div class="line">		<span class="comment">// ( types-Object, selector, data )</span></div><div class="line">		<span class="keyword">if</span> ( <span class="keyword">typeof</span> selector !== <span class="string">"string"</span> ) &#123;</div><div class="line"></div><div class="line">			<span class="comment">// ( types-Object, data )</span></div><div class="line">			data = data || selector;</div><div class="line">			selector = <span class="literal">undefined</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span> ( type <span class="keyword">in</span> types ) &#123;</div><div class="line">			on( elem, type, selector, data, types[ type ], one );</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> elem;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> ( data == <span class="literal">null</span> &amp;&amp; fn == <span class="literal">null</span> ) &#123;</div><div class="line"></div><div class="line">		<span class="comment">// ( types, fn )</span></div><div class="line">		fn = selector;</div><div class="line">		data = selector = <span class="literal">undefined</span>;</div><div class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> ( fn == <span class="literal">null</span> ) &#123;</div><div class="line">		<span class="keyword">if</span> ( <span class="keyword">typeof</span> selector === <span class="string">"string"</span> ) &#123;</div><div class="line"></div><div class="line">			<span class="comment">// ( types, selector, fn )</span></div><div class="line">			fn = data;</div><div class="line">			data = <span class="literal">undefined</span>;</div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line"></div><div class="line">			<span class="comment">// ( types, data, fn )</span></div><div class="line">			fn = data;</div><div class="line">			data = selector;</div><div class="line">			selector = <span class="literal">undefined</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> ( fn === <span class="literal">false</span> ) &#123;</div><div class="line">		fn = returnFalse;</div><div class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> ( !fn ) &#123;</div><div class="line">		<span class="keyword">return</span> elem;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> ( one === <span class="number">1</span> ) &#123;</div><div class="line">		origFn = fn;</div><div class="line">		fn = <span class="function"><span class="keyword">function</span>(<span class="params"> event </span>) </span>&#123;</div><div class="line"></div><div class="line">			<span class="comment">// Can use an empty set, since event contains the info</span></div><div class="line">			jQuery().off( event );</div><div class="line">			<span class="keyword">return</span> origFn.apply( <span class="keyword">this</span>, <span class="built_in">arguments</span> );</div><div class="line">		&#125;;</div><div class="line"></div><div class="line">		<span class="comment">// Use same guid so caller can remove using origFn</span></div><div class="line">		fn.guid = origFn.guid || ( origFn.guid = jQuery.guid++ );</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> elem.each( <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		jQuery.event.add( <span class="keyword">this</span>, types, fn, data, selector );</div><div class="line">	&#125; );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果events为对象，递归调用方法on<br>根据参数类型修正参数</p>
+<p>如果one为1（.one()），重新封装监听函数</p>
+<p>遍历当前匹配元素集合，为每个元素调用jQuery.event.add(elem,types,handler,data,selector)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//jquery.event.add()</span></div><div class="line">jQuery.event = &#123;</div><div class="line"></div><div class="line">	global: &#123;&#125;,</div><div class="line"></div><div class="line">	add: <span class="function"><span class="keyword">function</span>(<span class="params"> elem, types, handler, data, selector </span>) </span>&#123;</div><div class="line"></div><div class="line">		<span class="keyword">var</span> handleObjIn, eventHandle, tmp,</div><div class="line">			events, t, handleObj,</div><div class="line">			special, handlers, type, namespaces, origType,</div><div class="line">			elemData = dataPriv.get( elem );</div><div class="line"></div><div class="line">		<span class="comment">// Don't attach events to noData or text/comment nodes (but allow plain objects)</span></div><div class="line">		<span class="keyword">if</span> ( !elemData ) &#123;</div><div class="line">			<span class="keyword">return</span>;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">// Caller can pass in an object of custom data in lieu of the handler</span></div><div class="line">		<span class="keyword">if</span> ( handler.handler ) &#123;</div><div class="line">			handleObjIn = handler;</div><div class="line">			handler = handleObjIn.handler;</div><div class="line">			selector = handleObjIn.selector;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">// Ensure that invalid selectors throw exceptions at attach time</span></div><div class="line">		<span class="comment">// Evaluate against documentElement in case elem is a non-element node (e.g., document)</span></div><div class="line">		<span class="keyword">if</span> ( selector ) &#123;</div><div class="line">			jQuery.find.matchesSelector( documentElement, selector );</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">// Make sure that the handler has a unique ID, used to find/remove it later</span></div><div class="line">		<span class="keyword">if</span> ( !handler.guid ) &#123;</div><div class="line">			handler.guid = jQuery.guid++;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">// Init the element's event structure and main handler, if this is the first</span></div><div class="line">		<span class="keyword">if</span> ( !( events = elemData.events ) ) &#123;</div><div class="line">			events = elemData.events = &#123;&#125;;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> ( !( eventHandle = elemData.handle ) ) &#123;</div><div class="line">			eventHandle = elemData.handle = <span class="function"><span class="keyword">function</span>(<span class="params"> e </span>) </span>&#123;</div><div class="line"></div><div class="line">				<span class="comment">// Discard the second event of a jQuery.event.trigger() and</span></div><div class="line">				<span class="comment">// when an event is called after a page has unloaded</span></div><div class="line">				<span class="keyword">return</span> <span class="keyword">typeof</span> jQuery !== <span class="string">"undefined"</span> &amp;&amp; jQuery.event.triggered !== e.type ?</div><div class="line">					jQuery.event.dispatch.apply( elem, <span class="built_in">arguments</span> ) : <span class="literal">undefined</span>;</div><div class="line">			&#125;;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">// Handle multiple events separated by a space</span></div><div class="line">		types = ( types || <span class="string">""</span> ).match( rnothtmlwhite ) || [ <span class="string">""</span> ];</div><div class="line">		t = types.length;</div><div class="line">		<span class="keyword">while</span> ( t-- ) &#123;</div><div class="line">			tmp = rtypenamespace.exec( types[ t ] ) || [];</div><div class="line">			type = origType = tmp[ <span class="number">1</span> ];</div><div class="line">			namespaces = ( tmp[ <span class="number">2</span> ] || <span class="string">""</span> ).split( <span class="string">"."</span> ).sort();</div><div class="line"></div><div class="line">			<span class="comment">// There *must* be a type, no attaching namespace-only handlers</span></div><div class="line">			<span class="keyword">if</span> ( !type ) &#123;</div><div class="line">				<span class="keyword">continue</span>;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="comment">// If event changes its type, use the special event handlers for the changed type</span></div><div class="line">			special = jQuery.event.special[ type ] || &#123;&#125;;</div><div class="line"></div><div class="line">			<span class="comment">// If selector defined, determine special event api type, otherwise given type</span></div><div class="line">			type = ( selector ? special.delegateType : special.bindType ) || type;</div><div class="line"></div><div class="line">			<span class="comment">// Update special based on newly reset type</span></div><div class="line">			special = jQuery.event.special[ type ] || &#123;&#125;;</div><div class="line"></div><div class="line">			<span class="comment">// handleObj is passed to all event handlers</span></div><div class="line">			handleObj = jQuery.extend( &#123;</div><div class="line">				type: type,</div><div class="line">				origType: origType,</div><div class="line">				data: data,</div><div class="line">				handler: handler,</div><div class="line">				guid: handler.guid,</div><div class="line">				selector: selector,</div><div class="line">				needsContext: selector &amp;&amp; jQuery.expr.match.needsContext.test( selector ),</div><div class="line">				namespace: namespaces.join( <span class="string">"."</span> )</div><div class="line">			&#125;, handleObjIn );</div><div class="line"></div><div class="line">			<span class="comment">// Init the event handler queue if we're the first</span></div><div class="line">			<span class="keyword">if</span> ( !( handlers = events[ type ] ) ) &#123;</div><div class="line">				handlers = events[ type ] = [];</div><div class="line">				handlers.delegateCount = <span class="number">0</span>;</div><div class="line"></div><div class="line">				<span class="comment">// Only use addEventListener if the special events handler returns false</span></div><div class="line">				<span class="keyword">if</span> ( !special.setup ||</div><div class="line">					special.setup.call( elem, data, namespaces, eventHandle ) === <span class="literal">false</span> ) &#123;</div><div class="line"></div><div class="line">					<span class="keyword">if</span> ( elem.addEventListener ) &#123;</div><div class="line">						elem.addEventListener( type, eventHandle );</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="keyword">if</span> ( special.add ) &#123;</div><div class="line">				special.add.call( elem, handleObj );</div><div class="line"></div><div class="line">				<span class="keyword">if</span> ( !handleObj.handler.guid ) &#123;</div><div class="line">					handleObj.handler.guid = handler.guid;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="comment">// Add to the element's handler list, delegates in front</span></div><div class="line">			<span class="keyword">if</span> ( selector ) &#123;</div><div class="line">				handlers.splice( handlers.delegateCount++, <span class="number">0</span>, handleObj );</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				handlers.push( handleObj );</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="comment">// Keep track of which events have ever been used, for event optimization</span></div><div class="line">			jQuery.event.global[ type ] = <span class="literal">true</span>;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>.on 方法 example<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">$( <span class="string">"p"</span> ).on( <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  alert( $( <span class="keyword">this</span> ).text() );</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//将数据传递给事件处理程序</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myHandler</span>(<span class="params"> event </span>) </span>&#123;</div><div class="line">  alert( event.data.foo );</div><div class="line">&#125;</div><div class="line">$( <span class="string">"p"</span> ).on( <span class="string">"click"</span>, &#123; <span class="attr">foo</span>: <span class="string">"bar"</span> &#125;, myHandler );</div><div class="line"></div><div class="line"><span class="comment">//取消表单提交操作并防止事件通过返回而冒泡</span></div><div class="line">$( <span class="string">"form"</span> ).on( <span class="string">"submit"</span>, <span class="literal">false</span> );</div><div class="line"></div><div class="line"><span class="comment">//仅取消默认操作</span></div><div class="line">$( <span class="string">"form"</span> ).on( <span class="string">"submit"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event </span>) </span>&#123;</div><div class="line">  event.preventDefault();</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//停止提交事件冒泡而不阻止表单提交</span></div><div class="line">$( <span class="string">"form"</span> ).on( <span class="string">"submit"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event </span>) </span>&#123;</div><div class="line">  event.stopPropagation();</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//用trigger传递参数</span></div><div class="line">$( <span class="string">"div"</span> ).on( <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, person </span>) </span>&#123;</div><div class="line">  alert( <span class="string">"Hello, "</span> + person.name );</div><div class="line">&#125;);</div><div class="line">$( <span class="string">"div"</span> ).trigger( <span class="string">"click"</span>, &#123; <span class="attr">name</span>: <span class="string">"Jim"</span> &#125; );</div><div class="line"></div><div class="line">$( <span class="string">"div"</span> ).on( <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, salutation, name </span>) </span>&#123;</div><div class="line">  alert( salutation + <span class="string">", "</span> + name );</div><div class="line">&#125;);</div><div class="line">$( <span class="string">"div"</span> ).trigger( <span class="string">"click"</span>, [ <span class="string">"Goodbye"</span>, <span class="string">"Jim"</span> ] );</div><div class="line"></div><div class="line"><span class="comment">//同时绑定多个</span></div><div class="line">$( <span class="string">"div.test"</span> ).on(&#123;</div><div class="line">  click: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    $( <span class="keyword">this</span> ).toggleClass( <span class="string">"active"</span> );</div><div class="line">  &#125;, <span class="attr">mouseenter</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    $( <span class="keyword">this</span> ).addClass( <span class="string">"inside"</span> );</div><div class="line">  &#125;, <span class="attr">mouseleave</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    $( <span class="keyword">this</span> ).removeClass( <span class="string">"inside"</span> );</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//代理</span></div><div class="line"><span class="keyword">var</span> count = <span class="number">0</span>;</div><div class="line">$( <span class="string">"body"</span> ).on( <span class="string">"click"</span>, <span class="string">"p"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  $( <span class="keyword">this</span> ).after( <span class="string">"&lt;p&gt;Another paragraph! "</span> + (++count) + <span class="string">"&lt;/p&gt;"</span> );</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>.off 方法 example<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Remove all event handlers from all paragraphs:</span></div><div class="line">$( <span class="string">"p"</span> ).off();</div><div class="line"></div><div class="line"><span class="comment">//Remove all delegated click handlers from all paragraphs:</span></div><div class="line">$( <span class="string">"p"</span> ).off( <span class="string">"click"</span>, <span class="string">"**"</span> );</div><div class="line"></div><div class="line"><span class="comment">//Remove just one previously bound handler by passing it as the third //argument:</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// Code to handle some kind of event</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">// ... Now foo will be called when paragraphs are clicked ...</span></div><div class="line">$( <span class="string">"body"</span> ).on( <span class="string">"click"</span>, <span class="string">"p"</span>, foo );</div><div class="line"><span class="comment">// ... Foo will no longer be called.</span></div><div class="line">$( <span class="string">"body"</span> ).off( <span class="string">"click"</span>, <span class="string">"p"</span>, foo );</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//Unbind all delegated event handlers by their namespace:</span></div><div class="line"><span class="keyword">var</span> validate = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// Code to validate form entries</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">// Delegate events under the ".validator" namespace</span></div><div class="line">$( <span class="string">"form"</span> ).on( <span class="string">"click.validator"</span>, <span class="string">"button"</span>, validate );</div><div class="line">$( <span class="string">"form"</span> ).on( <span class="string">"keypress.validator"</span>, <span class="string">"input[type='text']"</span>, validate );</div><div class="line"><span class="comment">// Remove event handlers in the ".validator" namespace</span></div><div class="line">$( <span class="string">"form"</span> ).off( <span class="string">".validator"</span> );</div></pre></td></tr></table></figure></p>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>DOM事件管理看起来简单，其实会有各种各样的坑等着你。每一个前端从写完第一个页面开始就应该静下心来把其中内容透透彻彻的理解一遍。我现在就在后悔为什么不早点深入理解下DOM事件管理其中的奥秘，早点深入理解，之前遇到的有些问题想想就能迎刃而解。这篇文章我会随着我经验的丰富而去逐渐的完善它，希望自己理解的越来越深，向心中目标步步前行。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/09/29/深入理解ajax/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="daoSs's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        514197939@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/daoSs" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/xu-shuo-52/activities" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>daoSs`s blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
