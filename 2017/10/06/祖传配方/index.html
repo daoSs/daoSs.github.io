@@ -37,7 +37,7 @@
     
     <title>
         
-            深入理解ajax | 
+            祖传配方 | 
         
         daoSs`s blog
     </title>
@@ -49,7 +49,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="daoSs">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="daoSs,daoSs blog,blog,js">
+    <meta name="keywords" content="daoSs,daoSs blog,blog,保健">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -231,18 +231,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="深入理解ajax | daoSs`s blog">
+    <meta property="og:title" content="祖传配方 | daoSs`s blog">
     <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="js"> 
+    <meta property="og:article:tag" content="保健"> 
 
     
-        <meta property="article:published_time" content="Fri Sep 29 2017 10:15:49 GMT+0800" />
-        <meta property="article:modified_time" content="Thu Oct 05 2017 10:30:40 GMT+0800" />
+        <meta property="article:published_time" content="Fri Oct 06 2017 09:44:59 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Oct 06 2017 10:36:05 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="深入理解ajax | daoSs`s blog">
+    <meta name="twitter:title" content="祖传配方 | daoSs`s blog">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -250,7 +250,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2017/09/29/深入理解ajax/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/10/06/祖传配方/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -262,10 +262,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2017/09/29/深入理解ajax/index.html",
-    "headline": "深入理解ajax",
-    "datePublished": "Fri Sep 29 2017 10:15:49 GMT+0800",
-    "dateModified": "Thu Oct 05 2017 10:30:40 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2017/10/06/祖传配方/index.html",
+    "headline": "祖传配方",
+    "datePublished": "Fri Oct 06 2017 09:44:59 GMT+0800",
+    "dateModified": "Fri Oct 06 2017 10:36:05 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "daoSs",
@@ -283,7 +283,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",jsdaoSs,daoSs blog,blog",
+    "keywords": ",保健daoSs,daoSs blog,blog",
     "description": "",
 }
 </script>
@@ -349,7 +349,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XMLHttpRequest-对象"><span class="post-toc-number">1.</span> <span class="post-toc-text">XMLHttpRequest 对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XMLHttpRequest用法"><span class="post-toc-number">2.</span> <span class="post-toc-text">XMLHttpRequest用法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GET-、POST"><span class="post-toc-number">3.</span> <span class="post-toc-text">GET 、POST</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#超时设定"><span class="post-toc-number">4.</span> <span class="post-toc-text">超时设定</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#跨域"><span class="post-toc-number">5.</span> <span class="post-toc-text">跨域</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#女性体质虚弱气色不好"><span class="post-toc-number">1.</span> <span class="post-toc-text">女性体质虚弱气色不好</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#红糖美颜方"><span class="post-toc-number">2.</span> <span class="post-toc-text">红糖美颜方</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#女人如何延缓衰老"><span class="post-toc-number">3.</span> <span class="post-toc-text">女人如何延缓衰老</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4种食物对女人好处大"><span class="post-toc-number">4.</span> <span class="post-toc-text">4种食物对女人好处大</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#失眠小偏方"><span class="post-toc-number">5.</span> <span class="post-toc-text">失眠小偏方</span></a></li></ol>
     </ul>
     
 
@@ -381,7 +381,7 @@
         
     
             <p class="article-headline-p">
-                深入理解ajax
+                祖传配方
             </p>
         </div>
 
@@ -400,7 +400,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>daoSs</strong>
-        <span>9月 29, 2017</span>
+        <span>10月 06, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -424,7 +424,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/js/">js</a>
+        <a class="post_tag-link" href="/tags/保健/">保健</a>
     </ul>
     
 
@@ -440,7 +440,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=深入理解ajax&url=http://yoursite.com/2017/09/29/深入理解ajax/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=祖传配方&url=http://yoursite.com/2017/10/06/祖传配方/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=daoSs`s blog&title=深入理解ajax&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2017/09/29/深入理解ajax/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=daoSs`s blog&title=祖传配方&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2017/10/06/祖传配方/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -479,69 +479,11 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>不管前端怎么变，由客户端发起的与服务端通信使用最多的还是ajax。因此ajax无比重要，从刚进入前端世界时写的$.get() / $.put()，$.ajax()，到现在lizard框架中mvc中的model层获取数据的方法（实际上也是对$.ajax()进行各种封装）。</p>
-<h3 id="XMLHttpRequest-对象"><a href="#XMLHttpRequest-对象" class="headerlink" title="XMLHttpRequest 对象"></a>XMLHttpRequest 对象</h3><p>ajax技术的核心就是XMLHttpRequest对象（简称XHR），IE7+、FireFox、Chrom、Safari都支持原生XMLHttpRequest，直接new一个<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div></pre></td></tr></table></figure></p>
-<p>ie7-就没有这么简单啦，但这版本也太老了，做为新时代前端我有权利抛弃它，这篇文章就不赘述了。</p>
-<h3 id="XMLHttpRequest用法"><a href="#XMLHttpRequest用法" class="headerlink" title="XMLHttpRequest用法"></a>XMLHttpRequest用法</h3><p>在使用XHR对象时要调用的第一个方法是open()。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.open(<span class="string">"get"</span>,url,<span class="literal">false</span>);</div></pre></td></tr></table></figure></p>
-<p>第三个参数表示是否发送异步请求，open只是启动一个请求以备发送，只有当调用send()时才会发送请求到服务器。send(方法的参数就是要做为请求主体发送的数据)。</p>
-<p>在收到响应后，响应的数据会自动填充XHR对象的属性，相关介绍如下：</p>
-<blockquote>
-<ul>
-<li>responseText：响应主体被返回的文本。</li>
-<li>responseXML：如果响应内容类型是“text/xml”或“application/xml”，这个属性将保存相应数据的XML DOM文档。</li>
-<li>status：响应的HTTP状态。</li>
-<li>statusText：HTTP状态说明。<br>如果是同步请求的话，只需检测status，走成功或者失败方法。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt; <span class="number">300</span>) || xhr.status == <span class="number">304</span>)&#123;</div><div class="line">    <span class="comment">//成功</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="comment">//失败</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<p>如果是异步请求的时候我们必须检测XHR对象的readystate 属性该属性表示请求/响应过程的阶段。取值如下：</p>
-<blockquote>
-<ul>
-<li>0：未初始化。尚未调用open()。</li>
-<li>1：启动。已调用open()，未调用send()。</li>
-<li>2：发送。已调用send()，未收到响应。</li>
-<li>3：接收。接到部分响应数据。</li>
-<li>4：完成。已经接受到全部数据。<br>readystatus一变就会触发一次readystatechange事件：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(xhr.readyStatus == <span class="number">4</span>)&#123;</div><div class="line">      <span class="keyword">if</span>((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt; <span class="number">300</span>) || xhr.status == <span class="number">304</span>)&#123;</div><div class="line">          <span class="comment">//成功</span></div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">          <span class="comment">//失败</span></div><div class="line">        &#125; </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<p>默认情况下XHR还会发送HTTP头部信息：</p>
-<blockquote>
-<ul>
-<li>Accept：浏览器能处理的内容</li>
-<li>Accept-Charset：浏览器能显示的字符集</li>
-<li>Accept-Encoding：浏览器能处理的压缩编码</li>
-<li>Accept-Language：浏览器当前设置的语言</li>
-<li>connection：浏览器与服务器之间连接的类型</li>
-<li>cookie：当前页面设置的任何cookie</li>
-<li>Host：请求所在域</li>
-<li>Referer：发出页面请求的URI</li>
-<li>User-Agent：浏览器用户代理字符串<br>使用setRequestHeader()方法可以设置自定义请求头部信息。头部字段名称和头部字段值做为key，value形式作为参数。用户也可以自定义头部信息，这样在服务器收到请求后可以进行后续操作。</li>
-</ul>
-</blockquote>
-<p>同样的，调用XHR对象的getResponseHeader()传入头部字段名称，或者调用getAllResponseHeaders()可以获取头部信息的字符串。</p>
-<p>因此，服务器端返回给客户端的response可以增加额外的、结构化的数据供前端使用。</p>
-<h3 id="GET-、POST"><a href="#GET-、POST" class="headerlink" title="GET 、POST"></a>GET 、POST</h3><p>get、post请求大家都太熟悉了，大家都知道从请求参数来看get是把参数附在url后面，post是把请求参数作为请求的主体提交。但是成熟的ajax方法内部是如何去实现的呢。以jQuery、zepto.js封装好的api请求参数来看:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">url =   options.url || <span class="string">""</span>, <span class="comment">//请求的链接</span></div><div class="line">        type = (options.type || <span class="string">"get"</span>).toLowerCase(), <span class="comment">//请求的方法,默认为get</span></div><div class="line">        data = options.data || <span class="literal">null</span>, <span class="comment">//请求的数据</span></div><div class="line">        contentType = options.contentType || <span class="string">""</span>, <span class="comment">//请求头</span></div><div class="line">        dataType = options.dataType || <span class="string">""</span>, <span class="comment">//请求的类型</span></div><div class="line">        <span class="keyword">async</span> = options.async === <span class="literal">undefined</span> &amp;&amp; <span class="literal">true</span>, <span class="comment">//是否异步，默认为true.</span></div><div class="line">        timeOut = options.timeOut, <span class="comment">//超时时间。 </span></div><div class="line">        before = options.before || <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="comment">//发送之前执行的函数</span></div><div class="line">        error = options.error || <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="comment">//错误执行的函数</span></div><div class="line">        success = options.success || <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;; <span class="comment">//请求成功的回调函数</span></div></pre></td></tr></table></figure></p>
-<p>使用者只需要将type值设置为get或post就可指定这次请求是用post方式还是get方式请求。</p>
-<p>可是实际上，get请求时，XHR对象的send()方法的参数需要是null，需要我们手动把参数附在url后，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addUrlParam</span>(<span class="params">url,name,value</span>)</span>&#123;</div><div class="line">    url += (url.indexOf(<span class="string">"?"</span>) == <span class="number">-1</span> ? <span class="string">"?"</span> : <span class="string">"&amp;"</span>);</div><div class="line">    url += <span class="built_in">encodeURIComponent</span>(name) + <span class="string">"="</span> + <span class="built_in">encodeURIComponent</span>(value);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>对post请求而言，直接将data格式化一下塞到send的参数中即可<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (data) &#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> data === <span class="string">"string"</span>) &#123;</div><div class="line">            data = data.split(<span class="string">"&amp;"</span>);</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = data.length; i &lt; len; i++) &#123;</div><div class="line">                name = data[i].split(<span class="string">"="</span>)[<span class="number">0</span>];</div><div class="line">                value = data[i].split(<span class="string">"="</span>)[<span class="number">1</span>];</div><div class="line">                data[i] =  <span class="built_in">encodeURIComponent</span>(name) + <span class="string">"="</span> + <span class="built_in">encodeURIComponent</span>(value);</div><div class="line">            &#125;</div><div class="line">            data = data.replace(<span class="string">"/%20/g"</span>, <span class="string">"+"</span>);</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> data === <span class="string">"object"</span>) &#123;</div><div class="line">            <span class="keyword">var</span> arr = [];</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> name <span class="keyword">in</span> data) &#123;</div><div class="line">                <span class="keyword">var</span> value = data[name].toString();</div><div class="line">                name = <span class="built_in">encodeURIComponent</span>(name);</div><div class="line">                value = <span class="built_in">encodeURIComponent</span>(value);</div><div class="line">                arr.push(name + <span class="string">"="</span> + value);</div><div class="line">            &#125;</div><div class="line">            data = arr.join(<span class="string">"&amp;"</span>).replace(<span class="string">"/%20/g"</span>, <span class="string">"+"</span>);</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>另外对post请求来说，因为XHR设计的目的是处理XML，为了服务器端解析时对post发送的数据和提交web表单的请求一视同仁，我们首先需要调用setRequestHeader方法把Content-Type 头部信息设置为application/x-www-form-urlencoded<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.setRequestHeader(<span class="string">"Content-Type"</span>, <span class="string">"application/x-www-form-urlencoded"</span>);</div></pre></td></tr></table></figure></p>
-<p>并且由前端设置请求字符串，当然字符串也要经过前端的处理。</p>
-<p>到这里，我们基本上可以实现一个简单的ajax方法，但是如果要运用到实际生产中，这个方法是不健壮的，会有诸多问题。本文标题深入理解ajax，所以还要继续深入下去，逐步完善我们的ajax方法。</p>
-<h3 id="超时设定"><a href="#超时设定" class="headerlink" title="超时设定"></a>超时设定</h3><p>一个健壮的ajax方法一定是要用户可以自由设定超时时间的。在XMLHttpRequest对象在早期是没有自己的超时方法的，后来W3C推出了XMLHttpRequest 2级规范，向其中添加了格式化数据（formData()），超时设定（timeout）等方法。</p>
-<p>经过formData的append方法添加的健值对是可以直接通过send方法发送的，在这里不再赘述。</p>
-<p>如果当前浏览器的XHR对象支持timeout的话，我们可以这样设置超时时间：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(xhr.readyStatus == <span class="number">4</span>)&#123;</div><div class="line">      <span class="keyword">try</span>&#123;</div><div class="line">       <span class="keyword">if</span>((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt; <span class="number">300</span>) || xhr.status ==<span class="number">304</span>)&#123;</div><div class="line">             <span class="comment">//成功</span></div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">             <span class="comment">//失败</span></div><div class="line">          &#125; </div><div class="line">        &#125; <span class="keyword">catch</span>(ex) &#123;</div><div class="line">             由ontimeout事件处理程序处理</div><div class="line">          &#125;</div><div class="line">      </div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">xhr.timeout = <span class="number">1000</span>;<span class="comment">//单位是毫秒</span></div></pre></td></tr></table></figure></p>
-<p>当然，浏览器稍微老一点我们就得麻烦点，自己用settimeout写个定时器，时间到了以后标志位改变并且调用xhr.abort()方法取消异步请求。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setTime</span>(<span class="params">callback, script</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (timeOut !== <span class="literal">undefined</span>) &#123;</div><div class="line">            timeout_flag = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                </div><div class="line">                    timeout_bool = <span class="literal">true</span>;</div><div class="line">                    xhr &amp;&amp; xhr.abort();</div><div class="line">                </div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"timeout"</span>);</div><div class="line"></div><div class="line">            &#125;, timeOut);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span>) &#123;</div><div class="line">                <span class="keyword">if</span> (timeOut !== <span class="literal">undefined</span>) &#123;</div><div class="line">                    <span class="comment">//由于执行abort()方法后，有可能触发onreadystatechange事件，</span></div><div class="line">                    <span class="comment">//所以设置一个timeout_bool标识，来忽略中止触发的事件。</span></div><div class="line">                    <span class="keyword">if</span> (timeout_bool) &#123;</div><div class="line">                        <span class="keyword">return</span>;</div><div class="line">                    &#125;</div><div class="line">                    clearTimeout(timeout_flag);</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">if</span> ((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt; <span class="number">300</span>) || xhr.status == <span class="number">304</span>) &#123;</div><div class="line"></div><div class="line">                    success(xhr.responseText);</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                     error(xhr.status, xhr.statusText);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;;</div></pre></td></tr></table></figure></p>
-<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><p>跨域安全策略是对由XHR实现的ajax通信的一个主要限制，但是多数情况下我们必须要访问不同域的资源。CORS是w3c定义的关于必须访问跨域资源时，浏览器与服务器应该如何沟通。对于get post请求来说，发送请求时需要附加一个额外的Origin头部，其中包含请求的源信息（协议、域名和端口），以便服务器端根据这个头部信息来决定是否响应。如果服务器端认为这个请求可以接受，那么就会在Access-Control-Allow-Origin投不中回发相同的源信息（可以回发“*”）,如果没有这个头或者有这个头但不匹配的话浏览器会驳回请求。</p>
-<p>跨域施就算成功请求也是会有一些限制：</p>
-<blockquote>
-<ul>
-<li>不能使用setRequestHeader()设置自定义头</li>
-<li>不能发送和接受cookie</li>
-<li>调用getAllRequestHeaders()方法会返回空字符串</li>
-</ul>
-</blockquote>
-<p>在CORS之前，出现过一些处理跨域的奇淫技巧，，比如说之前公司（15年）还在使用的jsonp，具体原理是利用script标签没有跨域问题这个特性（准确说是所有带src属性的标签都有这个特性）。</p>
+        <h3 id="女性体质虚弱气色不好"><a href="#女性体质虚弱气色不好" class="headerlink" title="女性体质虚弱气色不好"></a>女性体质虚弱气色不好</h3><p>熬大枣首乌粥喝：取大枣10个、何首乌30克、粳米50克加水适量，如果每次加阿胶5克则效果更好。民间说一日食三枣，百岁不显老，要使皮肤好，粥里加红枣。</p>
+<h3 id="红糖美颜方"><a href="#红糖美颜方" class="headerlink" title="红糖美颜方"></a>红糖美颜方</h3><p>中医认为性温的红糖通过温而补之、温而散之来发挥补血作用，有益气、补血、散寒、活血化瘀、生津暖胃、健脾的功效。气血运行通畅上达与面部肤色自然变得红润而有光泽。内服：<br>红枣木耳汤：黑木耳50克，红枣10个，红糖100克。饭前服用每日两次，经常服用有消除黑眼圈的作用。<br>红枣菊花粥：红枣50克，黑米100克，菊花15支一同放入锅中，加清水适量煮粥，待粥煮至浓稠时放入适量红糖，此方具有健脾补血清肝明目之功效，常食用可使面部肤色红润，起到保健驻颜美容的作用。<br>滋润茶：绿茶两克，红糖30克，沸水冲泡后即可饮用，每日一剂会让皮肤变得干净透亮。</p>
+<h3 id="女人如何延缓衰老"><a href="#女人如何延缓衰老" class="headerlink" title="女人如何延缓衰老"></a>女人如何延缓衰老</h3><p>女人衰老的原因，一：缺气血，二：寒气。三：肾亏。每天早上三片生姜一杯蜂蜜水三颗红枣两天一瓶酸奶，平时多吃鸭血猪血。特别提醒：例假时期不能吃海带、海鲜、香蕉、西红柿、梳头（百会穴），洗完澡用电吹风热风吹肚脐（丹田），低血糖吹腰，月经不调吹后脑勺，每晚泡热水脚。<br>百草茶你会喝么？月季花红花茶有活血的作用、但怀孕后不能喝。<br>海棠花野菊花比较寒凉，脾胃虚寒的人不能饮用。<br>金银花偏寒任何人都不能长期饮用，尤其是脾胃虚寒体弱的人以及月经期女性特别注意。<br>枕头稍微垫高防肿眼泡：预防肿眼泡可以把枕头稍微垫高，这样睡觉时头部高于心脏可以避免过多的水分堆积在脸部，经常变换睡姿可以减少皱纹。如果你喜欢趴着睡或者经常侧向一边睡很容易产生皱纹，如果一定要侧睡最好能配若软的枕头和床单。<br>哪些人不宜吃避孕药：急慢性肝炎和肾病患者，心脏病或新功能不良者，高血压患者，慢性头痛患者……</p>
+<h3 id="4种食物对女人好处大"><a href="#4种食物对女人好处大" class="headerlink" title="4种食物对女人好处大"></a>4种食物对女人好处大</h3><p>一：酸奶——润肠补钙，酸奶可以改善肠道环境提高机体免疫力。<br>二：豆类——天然荷尔蒙，有助于调节荷尔蒙以及减轻女性更年期的症状。<br>三：燕麦片——安神止痛能稳定情绪。<br>四：红枣——补铁，成年女性每天至少吃两次。</p>
+<h3 id="失眠小偏方"><a href="#失眠小偏方" class="headerlink" title="失眠小偏方"></a>失眠小偏方</h3><p>阿胶、党参、冬麦、黄花、枸杞，制成膏状，其可以滋养五脏、补肾。目的是心肾相交从而达到阴阳平衡帮助你该晒睡眠……</p>
 
         
     
@@ -562,21 +504,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/10/05/事件委托/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/09/28/从new关键字去看js原型链/" id="post_nav-older" class="next-content">
+        <a href="/2017/10/05/事件委托/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
